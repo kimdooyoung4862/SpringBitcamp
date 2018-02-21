@@ -23,5 +23,5 @@ public class Command{
 	protected FoodDTO food;
 	protected MobileDTO mobile;
 
-
+//
 }
