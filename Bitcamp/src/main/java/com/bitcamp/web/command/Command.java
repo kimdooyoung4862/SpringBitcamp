@@ -11,6 +11,7 @@ import com.bitcamp.web.enums.Table;
 
 import lombok.Data;
 @Data
+
 public class Command{
 	protected String cmd,dir,page,view,column,data;
 	protected Action action;
