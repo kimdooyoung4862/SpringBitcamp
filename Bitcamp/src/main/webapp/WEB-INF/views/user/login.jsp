@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <section>
+		<script src="${js}/jquery-3.3.1.min.js"></script>
 <article>
 <table id="login-outer-table">
 	<tr>
 		<td colspan="5">
-			<form id="login-form" action="${context}/user.do">
+			<form id="login-form" action="mypage">
 				<table id="login-inner-table">
 					<tr>
 						<td><input id="login-userid-input" name="userid"
@@ -31,21 +32,10 @@
 </table>
 </article>
 </section>
-<%@ include file="../common/footer.jspf"%>
 <script>
-	document.querySelector('#login-admin-link').addEventListener('click',
-			function() {
-				location.href = "${context}/admin/main.do";
-			}, false);
-	document.querySelector('#login-join-link').addEventListener('click',
-			function() {
-				location.href = "${context}/user.do?cmd=move&page=join";
-			}, false);
-	document.querySelector('#login-btn').addEventListener('click',
-			function() {
-				document.querySelector('#login-form').submit();
-			}, false);
+
 </script>
+
 
 
 

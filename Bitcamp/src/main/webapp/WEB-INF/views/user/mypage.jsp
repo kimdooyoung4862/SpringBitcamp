@@ -1,37 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../common/nav.jspf"%>
+<script src="${js}/jquery-3.3.1.min.js"></script>
 <section>
 <article>
 	<table id="mypage-table">
 		<tr>
 			<td id="mypage-profile-img-td" rowspan="5">
-				<img id="mypage-profile-img" src="${image}/default_profile.png" alt="" /></td>
+				<img id="mypage-profile-img"/></td>
 			<td class="mypage-column">ID</td>
-			<td class="mypage-data">${sessionScope.user.userid}</td>
+			<td class="mypage-data"></td>
 			<td class="mypage-column">BIRTHDAY</td>
 			<td class="mypage-data"></td>
 		</tr>
 		<tr>
 			<td class="mypage-column">PASSWORD</td>
-			<td class="mypage-data">${sessionScope.user.password}</td>
+			<td class="mypage-data"></td>
 			<td class="mypage-column">PHONE</td>
-			<td class="mypage-data">${sessionScope.user.phone}</td>
+			<td class="mypage-data"></td>
 		</tr>
 		<tr>
 			<td class="mypage-column">NAME</td>
-			<td class="mypage-data">${sessionScope.user.name}</td>
+			<td class="mypage-data"></td>
 			<td class="mypage-column">EMAIL</td>
-			<td class="mypage-data">${sessionScope.user.email}</td>
+			<td class="mypage-data"></td>
 		</tr>
 		<tr>
 			<td class="mypage-column">SSN</td>
-			<td class="mypage-data">${sessionScope.user.ssn}</td>
+			<td class="mypage-data"></td>
 			<td class="mypage-column">ADDRESS</td>
-			<td class="mypage-data">${sessionScope.user.addr}</td>
+			<td class="mypage-data"></td>
 		</tr>
 		<tr>
 			<td class="mypage-column">ACCOUNT</td>
-			<td class="mypage-data">${sessionScope.user.account.accountNum}</td>
+			<td class="mypage-data"></td>
 			<td class="mypage-column"></td>
 			<td class="mypage-data"></td>
 		</tr>
@@ -43,17 +43,18 @@
   				<button id="mypage-change-btn">
   					수 정
   				</button>
+  				<button id="mypage-btn" >
+  					네비 이동
+  				</button>
   			</td>
   		</tr>
 	</table>
 </article>
 </section>
 <script>
-document.querySelector('#mypage-leave-btn').addEventListener(
-		'click',
-		function(){
-			location.href = "${context}/user.do?cmd=delete-member";
-		},
-		false);
+$('#mypage-btn').on('click',function(){
+	
+	location.href = "${context}/nav";
+});
 </script>
-<%@ include file="../common/footer.jspf"%>
+

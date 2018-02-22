@@ -14,6 +14,8 @@
 	</body>
 	<script>
 		$('#btn').on('click',function(){
-		alert('제이쿼리가 작동');});
+			
+			location.href = '${context}/login';
+		});
 	</script>
 </html>
