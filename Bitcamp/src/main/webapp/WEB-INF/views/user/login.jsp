@@ -25,8 +25,6 @@
 				</table>
 			</form> <a id="login-admin-link" href="#"> 관리자 </a>
 					 | <a id="login-join-link" href="#">회원가입 </a>
-				
-
 		</td>
 	</tr>
 </table>

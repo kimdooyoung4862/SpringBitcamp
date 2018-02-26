@@ -13,7 +13,7 @@
 	</head>
 	<style>
 		.footer-brand {
-        margin-top: 43%;
+        margin-top: 25%;
     }
 	</style>
 <body>

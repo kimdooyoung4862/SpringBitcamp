@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../common/nav.jspf"%>
 <style>
 #kakao_nav {float:left; width: 10%; text-align: left}
 #kakao_nav ul {list-style-type: none; margin: 0; padding-top: 40px; width: 100%; height: 620px; background-color: #f1f1f1}
