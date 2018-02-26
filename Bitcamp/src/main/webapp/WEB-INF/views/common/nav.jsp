@@ -2,27 +2,27 @@
 <nav id="nav">
 	<ul>
 		<li>
-			<a id="burgerking" class="#">버거킹</a></li>
-		<li>
-			<a id="nav-kakao-link" class="#">카카오뱅크</a>
+			<a id="burgerking" href="${path.context}/burgerking">버거킹</a>
 		</li>
 		<li>
-			<a id="bitcamp" class="#">비트캠프</a>
+			<a id="kakao" href="${path.context}/kakao">카카오뱅크</a>
 		</li>
 		<li>
-			<a id="nav-mobile-link" class="#">SK 텔레콤</a>
+			<a id="bitcamp" href="${path.context}/bitcamp">비트캠프</a>
 		</li>
 		<li>
-			<a id="lotto" class="#">로또</a>
+			<a id="mobile" href="${path.context}/mobile">SK 텔레콤</a>
 		</li>
 		<li>
-			<a id="mypage" class="#">마이페이지</a>
+			<a id="lotto" href="${path.context}/lotto">로또</a>
 		</li>
 		<li>
-			<a id="logout" class="#">로그아웃</a>
+			<a id="mypage" href="${path.context}/mypage" class="#">마이페이지</a>
+		</li>
+		<li>
+			<a id="logout" href="${path.context}/login" class="#">로그아웃</a>
 		</li>
 	</ul>
 </nav>
 <script>
-
 </script>

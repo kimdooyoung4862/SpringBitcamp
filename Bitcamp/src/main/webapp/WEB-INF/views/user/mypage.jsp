@@ -54,7 +54,7 @@
 <script>
 $('#mypage-btn').on('click',function(){
 	
-	location.href = "${context}/nav";
+	location.href = "${path.context}/nav";
 });
 </script>
 

@@ -1,14 +1,17 @@
 package com.bitcamp.web.factory;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import com.bitcamp.web.domain.PathDTO;
+import com.bitcamp.web.enums.Path;
+
 @Component
 public class ContextFactory extends Factory{
-	private static final Logger logger = LoggerFactory.getLogger(ContextFactory.class);
+	@Autowired PathDTO path;
+	@Autowired ContextFactory contextFactory;
 	@Override
 	public Object create() {
 		return ((ServletRequestAttributes) RequestContextHolder
@@ -16,9 +19,12 @@ public class ContextFactory extends Factory{
 				.getRequest()
 				.getContextPath();
 	}
-	
-	public String path(String tag) {
-		logger.info("ContextFactory path ()에 넘어온 tag 값은 {} 이다",tag);
-		return create() + "/resources/" + tag;
+	public PathDTO path() {
+		path.setContext((String)create());
+		path.setJs(create()+Path.JS.toString());
+		path.setCss(create()+Path.CSS.toString());
+		path.setImg(create()+Path.IMG.toString());
+		path.setFonts(create()+Path.FONTS.toString());
+		return path;
 	}
 }

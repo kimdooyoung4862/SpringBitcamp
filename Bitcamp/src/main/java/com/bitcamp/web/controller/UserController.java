@@ -14,15 +14,30 @@ public class UserController {
 	
 	@RequestMapping("/mypage")
 	public String myPage(Model model) {
-		model.addAttribute("context",contextfactory.create());
-		model.addAttribute("js",contextfactory.path("js"));
-		return "user/mypage";
+		return "public:user/mypage.tiles";
 	}
 	@RequestMapping("/nav")
 	public String nav(Model model) {
-		model.addAttribute("context",contextfactory.create());
-		model.addAttribute("js",contextfactory.path("js"));
-		return "common/nav";
+		return "public:common/nav.tiles";
 	}
-
+	@RequestMapping("/burgerking")
+	public String burgerking(Model model) {
+		return "public:burgerking/main.tiles";
+	}
+	@RequestMapping("/kakao")
+	public String kakao(Model model) {
+		return "public:account/main.tiles";
+	}
+	@RequestMapping("/bitcamp")
+	public String bitcamp(Model model) {
+		return "public:bitcamp/main.tiles";
+	}
+	@RequestMapping("/mobile")
+	public String mobile(Model model) {
+		return "public:mobile/main.tiles";
+	}
+	@RequestMapping("/lotto")
+	public String lotto(Model model) {
+		return "public:lotto/main.tiles";
+	}
 }

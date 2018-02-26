@@ -33,7 +33,9 @@
 </article>
 </section>
 <script>
-
+$('#login-btn').on('click',function(){	
+	location.href = '${path.context}/mypage';
+});
 </script>
 
 

@@ -3,7 +3,7 @@
 <section>
 <article>
 	<header>
-		<hgroup>
+		<hgroup style="text-align: center">
 			<h1><mark>버거킹</mark> 주문 화면</h1>
 			<h6>상품과 수량을 선택해 주세요</h6>
 		</hgroup>
@@ -16,7 +16,7 @@
 		<tr>
 			<td>
 			<figure>
-				<img src="../../img/hamburger.jpg" style="width: 200px; height: 150px;" alt="" /><br />
+				<img src="${path.img}/hamburger.jpg" style="width: 200px; height: 150px;" alt="" /><br />
 				<figcaption>
 					<input type="checkbox" name="menu" value="hamberger"/>햄버거 ￦5,500
 					<input type="number" name="hamburger-count" style="width: 30px" min="1" max="9" /> 개
@@ -25,7 +25,7 @@
 			</td>
 			<td>
 			<figure>
-				<img src="../../img/coke.jpg" style="width: 200px; height: 150px;" alt="" />
+				<img src="${path.img}/coke.jpg" style="width: 200px; height: 150px;" alt="" />
 				<figcaption>
 					<input type="checkbox" name="menu" value="coke"/>콜라 : ￦1,000 
 					<input type="number" name="coke-count" style="width: 30px" min="1" max="9" /> 개
@@ -34,7 +34,7 @@
 			</td>
 			<td>
 			<figure>
-				<img src="../../img/chip.jpg" style="width: 200px; height: 150px" alt="" />
+				<img src="${path.img}/chip.jpg" style="width: 200px; height: 150px" alt="" />
 				<figcaption>
 					<input type="checkbox" name="menu" value="chip"/>감자칩 : ￦1,000
 					<input type="number" name="chip-count" style="width: 30px" min="1" max="9" /> 개
@@ -45,7 +45,7 @@
 		<tr>
 			<td>
 			<figure>
-				<img src="../../img/coffee.jpg" style="width: 200px; height: 150px" alt="" />
+				<img src="${path.img}/coffee.jpg" style="width: 200px; height: 150px" alt="" />
 				<figcaption>
 					<input type="checkbox" name="menu" value="coffee"/>커피 : ￦900
 					<input type="number" name="coffee-count" style="width: 30px" min="1" max="9" /> 개
@@ -54,7 +54,7 @@
 			</td>
 			<td>
 			<figure>
-				<img src="../../img/bagel.jpg" style="width: 200px; height: 150px" alt="" />
+				<img src="${path.img}/bagel.jpg" style="width: 200px; height: 150px" alt="" />
 				<figcaption>
 					<input type="checkbox" name="menu" value="bagel"/>베이글 : ￦4.000
 					<input type="number" name="bagel-count" style="width: 30px" min="1" max="9" /> 개
@@ -63,7 +63,7 @@
 			</td>
 			<td>
 			<figure>
-				<img src="../../img/salad.jpg" style="width: 200px; height: 150px" alt="" />
+				<img src="${path.img}/salad.jpg" style="width: 200px; height: 150px" alt="" />
 				<figcaption>
 					<input type="checkbox" name="menu" value="salad"/>샐러드 : ￦3.000
 					<input type="number" name="salad-count" style="width: 30px" min="1" max="9" /> 개
