@@ -15,7 +15,7 @@
 		<tr>
 			<td>
 			<figure>
-				<img src="${path.img}/hamburger.jpg" style="width: 200px; height: 150px;" alt="" /><br />
+				<img id="hamburger" src="${path.img}/hamburger.jpg" style="width: 200px; height: 150px;" alt="" /><br />
 				<figcaption>
 					<input type="checkbox" name="menu" value="hamberger"/>햄버거 ￦5,500
 					<input type="number" name="hamburger-count" style="width: 30px" min="1" max="9" /> 개
@@ -93,7 +93,6 @@
 </section>
 <aside></aside>
 </div>
-<%@ include file="../common/footer.jspf"%>	
+
 </body>
-<script src="../../js/burgerking.js"></script>
 </html>

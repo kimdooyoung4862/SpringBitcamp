@@ -4,7 +4,7 @@
     .navbar-brand {
         padding-top: 0px;
     }
-	</style>
+</style>
 <!-- <nav class="navbar navbar-default">
       <div class="container container-fluid">
         <div class="navbar-header">
@@ -67,16 +67,14 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">
+        <li id="a-home" class="active"><a href="#">
         	<span class="glyphicon glyphicon-home" aria-hidden="true"> HOME</span></a></li>
         <li><a id="a-about" href="#about">
         	<span class="glyphicon glyphicon-map-marker" aria-hidden="true"> about</span>
         </a></li>
-        <li><a id="a-login" href="#about">
-        	<span class="glyphicon glyphicon-user" aria-hidden="true"> login</span>
-        </a></li>
+        <li><a id="a-login" class="tnb-link" href="#" data-target="#login">로그인</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 선택 <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-expanded="false"> 선택 <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a id="a-burgerking" href="#"> 버거킹 </a></li>
             <li><a id="a-kakao" href="#"> 카카오뱅크 </a></li>
@@ -135,8 +133,10 @@
 	$('#a-mypage').on('click',function(){	
 		location.href = '${path.context}/mypage';
 	});
+	$('#a-home').on('click',function(){	
+		location.href = '${path.context}/home';
+	});
 </script>
-		
 		
 		
 		
