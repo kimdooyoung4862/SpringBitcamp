@@ -1,5 +1,7 @@
 package com.bitcamp.web.command;
 
+import org.springframework.stereotype.Component;
+
 import com.bitcamp.web.domain.AccountDTO;
 import com.bitcamp.web.domain.AttendDTO;
 import com.bitcamp.web.domain.FoodDTO;
@@ -11,7 +13,7 @@ import com.bitcamp.web.enums.Table;
 
 import lombok.Data;
 @Data
-
+@Component
 public class Command{
 	protected String cmd,dir,page,view,column,data;
 	protected Action action;

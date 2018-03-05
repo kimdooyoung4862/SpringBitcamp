@@ -5,6 +5,8 @@
 <mapper namespace="com.bitcamp.web.mapperImpl.MemberMapperImpl">
 	<insert id="insertMember" parameterType="cmd"></insert>
 	<select id="selectMemberById" resultType="rmp" parameterType="cmd"></select>
-	<select id="login" resultType="rmp" parameterType="cmd"></select>
+	<select id="login" resultType="member" parameterType="cmd">
+	SELECT * FROM MEMBER WHERE ID LIKE #{member.id} AND PASS LIKE #{member.pass}
+	</select>
 	<delete id="deleteMember" parameterType="cmd"></delete>
 </mapper>

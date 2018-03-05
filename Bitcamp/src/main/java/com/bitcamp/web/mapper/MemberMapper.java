@@ -2,13 +2,13 @@ package com.bitcamp.web.mapper;
 
 import org.springframework.stereotype.Component;
 import com.bitcamp.web.command.Command;
-import com.bitcamp.web.command.ResultMap;
+import com.bitcamp.web.domain.MemberDTO;
 
 @Component
 public interface MemberMapper {
 	public void insertMember(Command cmd);
-	public ResultMap selectMemberById(Command cmd);
-	public ResultMap login(Command cmd);
+	public MemberDTO selectMemberById(Command cmd);
+	public MemberDTO login(Command cmd);
 	public void deleteMember(Command cmd);
 
 }
