@@ -7,7 +7,7 @@ import com.bitcamp.web.domain.AttendDTO;
 import com.bitcamp.web.domain.FoodDTO;
 import com.bitcamp.web.domain.LottoDTO;
 import com.bitcamp.web.domain.MemberDTO;
-import com.bitcamp.web.domain.MobileDTO;
+import com.bitcamp.web.domain.PhoneDTO;
 import com.bitcamp.web.enums.Action;
 import com.bitcamp.web.enums.Table;
 
@@ -23,7 +23,7 @@ public class Command{
 	protected AttendDTO attend;
 	protected LottoDTO lotto;
 	protected FoodDTO food;
-	protected MobileDTO mobile;
+	protected PhoneDTO mobile;
 
 //
 }

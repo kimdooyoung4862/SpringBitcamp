@@ -59,7 +59,7 @@
                             <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;로그인</span>
                         </a>
                         <a id="a-join" href="#"> 
-                            <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;조인</span>
+                            <span class="glyphicon glyphicon-plus-sign" aria-hidden="true">&nbsp;회원가입</span>
                         </a>
                     </li>
                 </c:when>

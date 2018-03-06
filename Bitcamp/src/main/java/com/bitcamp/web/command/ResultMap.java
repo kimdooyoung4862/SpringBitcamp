@@ -6,7 +6,7 @@ import com.bitcamp.web.domain.AttendDTO;
 import com.bitcamp.web.domain.FoodDTO;
 import com.bitcamp.web.domain.LottoDTO;
 import com.bitcamp.web.domain.MemberDTO;
-import com.bitcamp.web.domain.MobileDTO;
+import com.bitcamp.web.domain.PhoneDTO;
 import lombok.Data;
 
 @Data
@@ -16,13 +16,13 @@ public class ResultMap {
 	protected AttendDTO attend;
 	protected LottoDTO lotto;
 	protected FoodDTO food;
-	protected MobileDTO mobile;
+	protected PhoneDTO mobile;
 	protected List<MemberDTO> members;
 	protected List<AccountDTO> accounts;
 	protected List<AttendDTO> attends;
 	protected List<LottoDTO> lottos;
 	protected List<FoodDTO> foods;
-	protected List<MobileDTO> mobiles;
+	protected List<PhoneDTO> mobiles;
 	protected boolean success;
 	protected int count;
 }

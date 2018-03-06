@@ -8,14 +8,13 @@
 #kakao_nav li a.active {background-color: #4CAF50; color: white}
 
 .kakao_menu_btn {margin-top: 30px}
-.kakao_menu_btn button {width:200px; height: 350px; font-size: 30px; font-weight: bold; color: #333333; background-color: #ffdc00;
+.kakao_menu_btn button {width:200px; height: 350px; font-size: 30px; font-weight: bold; color: #333333;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}
 .kakao_menu_btn button:hover {background-color: #555; color: white}}
 </style>
-<div>
 <div id="kakao_nav">
 	<ul>
-		<li><a class="active" >핸드폰 개통</a><br /></li>
+		<li><a class="active" >핸드폰 선택</a><br /></li>
 		<li><a>미정</a><br /></li>
 		<li><a>미정</a><br /></li>
 		<li><a>미정</a><br /></li>
@@ -25,23 +24,18 @@
 <section>
 <article>
 <h1 style ="text-align: left; padding: 15px; text-indent: 15px">핸드폰 개통</h1>
-<div class="kakao_menu_btn">
-	<button id="mobile-create-phone-btn">핸드폰 개통</button>&nbsp;&nbsp;&nbsp; 
-	<button>미정</button>&nbsp;&nbsp;&nbsp; 
-	<button>미정</button>&nbsp;&nbsp;&nbsp; 
-	<button>미정</button>&nbsp;&nbsp;&nbsp; 
-	<button>미정</button>
+<div>
+	<button type="submit"><img style="width:200px; height: 350px; " class="btn-img" src="${path.img}/phone/Gs9.jpg"></button>
+	<button type="submit"><img style="width:200px; height: 350px; " class="btn-img" src="${path.img}/phone/Gs8.jpg"></button>
+	<button type="submit"><img style="width:200px; height: 350px; " class="btn-img" src="${path.img}/phone/Gs7.jpg"></button>
+	<button type="submit"><img style="width:200px; height: 350px; " class="btn-img" src="${path.img}/phone/ipad10.jpg"></button>
+	<button type="submit"><img style="width:200px; height: 350px; " class="btn-img" src="${path.img}/phone/i8.jpg"></button>
+	<button type="submit"><img style="width:200px; height: 350px; " class="btn-img" src="${path.img}/phone/i7.jpg"></button>
 </div>
 </article>
 </section>
 <aside>
 </aside>
-</div>
 <script>
-document.querySelector('#mobile-create-phone-btn').addEventListener(
-		'click',
-		function(){
-			location.href = "${context}/mobile.do?cmd=open-phone&dir=user&page=mypage";
-		},
-		false);
+
 </script>

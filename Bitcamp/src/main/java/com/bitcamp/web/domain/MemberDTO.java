@@ -10,7 +10,7 @@ public class MemberDTO {
 	private String id,pass,name,ssn,
 				phone,email,profile,addr;
 	private AccountDTO account;
-	private MobileDTO mobile;
+	private PhoneDTO mobile;
 	private LottoDTO lotto;
 	private FoodDTO food;
 
