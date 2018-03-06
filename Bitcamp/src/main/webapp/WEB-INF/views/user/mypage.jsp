@@ -7,27 +7,27 @@
 			<td id="mypage-profile-img-td" rowspan="5">
 				<img id="mypage-profile-img"/></td>
 			<td class="mypage-column">ID</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">${user.id}</td>
 			<td class="mypage-column">BIRTHDAY</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">${user.ssn}</td>
 		</tr>
 		<tr>
 			<td class="mypage-column">PASSWORD</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">****</td>
 			<td class="mypage-column">PHONE</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">${user.phone}</td>
 		</tr>
 		<tr>
 			<td class="mypage-column">NAME</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">${user.name}</td>
 			<td class="mypage-column">EMAIL</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">${user.email}</td>
 		</tr>
 		<tr>
 			<td class="mypage-column">SSN</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">${user.ssn}</td>
 			<td class="mypage-column">ADDRESS</td>
-			<td class="mypage-data"></td>
+			<td class="mypage-data">${user.addr}</td>
 		</tr>
 		<tr>
 			<td class="mypage-column">ACCOUNT</td>

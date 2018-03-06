@@ -23,15 +23,13 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public MemberDTO findMemberById(Command cmd) {
-		// TODO Auto-generated method stub
-		return null;
+		return (mapper.selectMemberById(cmd));
 	}
 
 	@Override
 	public boolean exist(Command cmd) {
 		logger.info("MemberServiceImpl login() ID is {} ", cmd.getMember().getId());
-		boolean flag = false;
-		return flag;
+		return (mapper.exist(cmd) != 0);
 	}
 
 	@Override

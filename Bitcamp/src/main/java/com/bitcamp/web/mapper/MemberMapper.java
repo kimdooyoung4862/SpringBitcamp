@@ -8,7 +8,7 @@ import com.bitcamp.web.domain.MemberDTO;
 public interface MemberMapper {
 	public void insertMember(Command cmd);
 	public MemberDTO selectMemberById(Command cmd);
-	public MemberDTO login(Command cmd);
+	public int exist(Command cmd);
 	public void deleteMember(Command cmd);
 
 }

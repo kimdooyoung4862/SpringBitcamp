@@ -25,14 +25,13 @@ public class MemberMapperImpl implements MemberMapper{
 
 	@Override
 	public MemberDTO selectMemberById(Command cmd) {
-		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectOne(ns+"selectMemberById",cmd);
 	}
 
 	@Override
-	public MemberDTO login(Command cmd) {
+	public int exist(Command cmd) {
 		logger.info("MemberMapperImpl login() ID is {} ",cmd.getMember().getId());
-		return sqlSession.selectOne(ns+"login",cmd);
+		return sqlSession.selectOne(ns+"exist",cmd);
 	}
 
 	@Override

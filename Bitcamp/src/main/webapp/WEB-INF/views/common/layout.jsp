@@ -10,6 +10,8 @@
 		<script src="${path.js}/bootstrap.js"></script>
 		<link rel="stylesheet" href="${path.css}/bootstrap-theme.css"></link>
 		<link rel="stylesheet" href="${path.css}/bootstrap.css"></link>
+		<link rel="stylesheet" href="${path.css}/mypage.css"></link>
+		<link rel="stylesheet" href="${path.css}/login.css"></link>
 	</head>
 	<style>
 		.footer-brand {

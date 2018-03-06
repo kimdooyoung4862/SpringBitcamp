@@ -5,9 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 import com.bitcamp.web.command.Command;
 import com.bitcamp.web.domain.LottoDTO;
@@ -39,18 +41,26 @@ public class UserController {
 		member.setId(userid);
 		member.setPass(password);
 		cmd.setMember(member);
-		String path = "";
+		String path = "public:user/login.tiles";
 		if(mService.exist(cmd)) {
 			model.addAttribute("user", mService.findMemberById(cmd));
-			path = "public:common/nav.tiles";
-		}else{
-			path = "public:user/login.tiles";
+			path = "public:user/mypage.tiles";
 		}
 		return path;
+	}
+	@RequestMapping("/logout")
+	public String logout(SessionStatus status) {
+		status.setComplete();
+		logger.info("[컨드롤러 : 로그아웃]");
+		return "public:user/login.tiles";
 	}
 	@RequestMapping("/nav")
 	public String nav() {
 		return "public:common/nav.tiles";
+	}
+	@RequestMapping("/mypage")
+	public String mypage() {
+		return "public:user/mypage.tiles";
 	}
 	@RequestMapping("/burgerking")
 	public String burgerking() {

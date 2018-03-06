@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <style>
     .navbar-brand {
         padding-top: 0px;
@@ -72,7 +72,6 @@
         <li><a id="a-about" href="#about">
         	<span class="glyphicon glyphicon-map-marker" aria-hidden="true"> about</span>
         </a></li>
-        <li><a id="a-login" class="tnb-link" href="#" data-target="#login">로그인</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-expanded="false"> 선택 <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -99,11 +98,23 @@
             <li><a id="a-mypage" href="#"> 
             	<span class="glyphicon glyphicon-user" aria-hidden="true"> 마이페이지 </span>
                 </a></li>
-            <li><a id="a-logout" href="#">
-            	<span class="glyphicon glyphicon-log-out" aria-hidden="true"> 로그아웃 </span>
-            	</a></li>
+                <c:choose>
+                <c:when test="${user eq null}">
+                    <li>
+                        <a id="a-login" href="#"> 
+                            <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;로그인</span>
+                        </a>
+                    </li>
+                </c:when>
+                <c:otherwise>
+                    <li>
+                        <a id="a-logout" href="#">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true">&nbsp;로그아웃</span>
+                        </a>
+                    </li>                
+                </c:otherwise>
+                </c:choose>
           </ul>
-        </li>
       </ul>
     </div>
   </div>
@@ -128,7 +139,7 @@
 		location.href = '${path.context}/mobile';
 	});
 	$('#a-logout').on('click',function(){	
-		location.href = '${path.context}/home';
+		location.href = '${path.context}/logout';
 	});
 	$('#a-mypage').on('click',function(){	
 		location.href = '${path.context}/mypage';
