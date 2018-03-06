@@ -3,7 +3,9 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bitcamp.web.mapperImpl.MemberMapperImpl">
-	<insert id="insertMember" parameterType="cmd"></insert>
+	<insert id="insertMember" parameterType="cmd">
+	INSERT INTO MEMBER VALUES (#{member.id},#{member.pass},#{member.ssn},#{member.phone},#{member.email},#{member.profile},#{member.addr})
+	</insert>
 	<select id="selectMemberById" resultType="member" parameterType="cmd">
 	SELECT * FROM MEMBER WHERE ID LIKE #{member.id}
 	</select>

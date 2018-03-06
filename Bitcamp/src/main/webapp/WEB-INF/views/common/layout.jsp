@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="${path.css}/bootstrap.css"></link>
 		<link rel="stylesheet" href="${path.css}/mypage.css"></link>
 		<link rel="stylesheet" href="${path.css}/login.css"></link>
+		<link rel="stylesheet" href="${path.css}/join.css"></link>
 	</head>
 	<style>
 		.footer-brand {

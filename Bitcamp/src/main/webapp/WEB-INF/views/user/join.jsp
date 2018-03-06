@@ -1,23 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8" />
-	<title>Index</title>
-	<link rel="shortcut icon" href="../../img/favicon.ico">
-	<link rel="stylesheet" href="../../css/common.css" />
-	<link rel="stylesheet" href="../../css/index.css" />
-</head>
-<body>
-<div id="wrapper">
-<header id="index_header">
-	<h1><a href="#" >
-		BIT CAMP SAMPLE PROJECT
-	</a></h1>
-</header>
-<section id="index_section">
-<article>
-<form name="join_form" action="${ctx}/user.do" >
 	<table style="margin: 0 auto;height: 400px;border: 2px">
 	<tr>
 	<td style="width: 150px">아이디</td>
@@ -29,12 +10,12 @@
 	
 	<tr>
 	<td>이름</td>
-	<td><input name="name"  style="margin-right: 150px"  type="text" /></td>
+	<td><input id="join_name" name="name"  style="margin-right: 150px"  type="text" /></td>
 	</tr>
 	
 	<tr>
 	<td>암호</td>
-	<td><input name="pass"   style="margin-right: 150px" type="password" /></td>
+	<td><input id="join_pass" name="pass"   style="margin-right: 150px" type="password" /></td>
 	</tr>
 	
 	<tr>
@@ -92,20 +73,13 @@
 		</td>
 	</tr>
 	</table>
-</form>
-</article>
-</section>
-<aside></aside>
-</div>
-<%@ include file="../common/footer.jspf"%>	
 <script>
-var joinConfirmBtn = document.querySelector('#join_confirm_btn');
-joinConfirmBtn.addEventListener('click',
-	function () {
-		alert("==========회원 컨트롤러고 진입시도===========");
-		var form = document.querySelector('#join_form');
-		form.submit();
-},false);
+$('#join_confirm_btn').on('click',function(){
+	var id = $('#join_id').val();
+	var pass = $('#join_pass').val();
+	var name = $('#join_name').val();
+	location.href = "${path.context}/join/"+id+"/"+pass+"/"+name;
+});
 </script>
 
 

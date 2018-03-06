@@ -19,7 +19,8 @@ public class MemberMapperImpl implements MemberMapper{
 	
 	@Override
 	public void insertMember(Command cmd) {
-		// TODO Auto-generated method stub
+		logger.info("MemberMapperImpl join() ID is {} ",cmd.getMember().getId());
+		sqlSession.insert(ns+"insertMember",cmd);
 		
 	}
 

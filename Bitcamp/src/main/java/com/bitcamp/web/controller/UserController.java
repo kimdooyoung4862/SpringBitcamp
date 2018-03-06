@@ -5,12 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-
 import com.bitcamp.web.command.Command;
 import com.bitcamp.web.domain.LottoDTO;
 import com.bitcamp.web.domain.MemberDTO;
@@ -52,7 +50,25 @@ public class UserController {
 	public String logout(SessionStatus status) {
 		status.setComplete();
 		logger.info("[컨드롤러 : 로그아웃]");
-		return "public:user/login.tiles";
+		return "redirect:/login";
+	}
+	@RequestMapping("/join")
+	public String join() {
+		logger.info("[컨드롤러 : 조인]");
+		return "public:user/join.tiles";
+	}
+	@RequestMapping("/join/{id}/{pass}/{name}")
+	public String join(@PathVariable("id")String id,@PathVariable("pass")String pass,@PathVariable("name")String name) {
+		logger.info("[컨드롤러 : 조인]");
+		logger.info("UserController join() ID is {} ", id);
+		logger.info("UserController join() PASS is {} ", pass);
+		logger.info("UserController join() PASS is {} ", name);
+		member.setId(id);
+		member.setPass(pass);
+		member.setName(name);
+		cmd.setMember(member);
+		mService.addMember(cmd);
+		return "redirect:/login";
 	}
 	@RequestMapping("/nav")
 	public String nav() {
