@@ -78,22 +78,22 @@
 </nav>
 <script>
 	$('#a-login').on('click',function(){	
-		location.href = '${path.context}/login';
+		location.href = '${path.context}/move/user/login';
 	});
 	$('#a-burgerking').on('click',function(){	
-		location.href = '${path.context}/burgerking';
+		location.href = '${path.context}/move/burgerking/main';
 	});
 	$('#a-bitcamp').on('click',function(){	
-		location.href = '${path.context}/bitcamp';
+		location.href = '${path.context}/move/bitcamp/main';
 	});
 	$('#a-lotto').on('click',function(){	
-		location.href = '${path.context}/lotto';
+		location.href = '${path.context}/move/lotto/main';
 	});
 	$('#a-kakao').on('click',function(){	
-		location.href = '${path.context}/kakao';
+		location.href = '${path.context}/move/kakao/main';
 	});
 	$('#a-mobile').on('click',function(){	
-		location.href = '${path.context}/mobile';
+		location.href = '${path.context}/mobile/main';
 	});
 	$('#a-logout').on('click',function(){	
 		location.href = '${path.context}/logout';
@@ -102,10 +102,10 @@
 		location.href = '${path.context}/mypage';
 	});
 	$('#a-home').on('click',function(){	
-		location.href = '${path.context}/home';
+		location.href = '${path.context}/move/home';
 	});
 	$('#a-join').on('click',function(){	
-		location.href = '${path.context}/join';
+		location.href = '${path.context}/move/user/join';
 	});
 </script>
 		

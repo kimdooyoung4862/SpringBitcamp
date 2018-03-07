@@ -13,6 +13,7 @@ import com.bitcamp.web.command.Command;
 import com.bitcamp.web.domain.LottoDTO;
 import com.bitcamp.web.domain.MemberDTO;
 import com.bitcamp.web.factory.ContextFactory;
+import com.bitcamp.web.factory.ShiftFactory;
 import com.bitcamp.web.mapper.MemberMapper;
 import com.bitcamp.web.service.LottoService;
 import com.bitcamp.web.service.MemberService;
@@ -28,6 +29,7 @@ public class UserController {
 	@Autowired MemberMapper mapService;
 	@Autowired MemberDTO member;
 	@Autowired Command cmd;
+	@Autowired ShiftFactory shift;
 	
 	@RequestMapping("/login/{userid}/{password}")
 	public String login(Model model,
@@ -39,10 +41,10 @@ public class UserController {
 		member.setId(userid);
 		member.setPass(password);
 		cmd.setMember(member);
-		String path = "public:user/login.tiles";
+		String path = shift.create("user", "login");
 		if(mService.exist(cmd)) {
 			model.addAttribute("user", mService.findMemberById(cmd));
-			path = "public:user/mypage.tiles";
+			path = shift.create("user", "mypage");
 		}
 		return path;
 	}
@@ -50,12 +52,7 @@ public class UserController {
 	public String logout(SessionStatus status) {
 		status.setComplete();
 		logger.info("[컨드롤러 : 로그아웃]");
-		return "redirect:/login";
-	}
-	@RequestMapping("/join")
-	public String join() {
-		logger.info("[컨드롤러 : 조인]");
-		return "public:user/join.tiles";
+		return shift.redirect("user", "login");
 	}
 	@RequestMapping("/join/{id}/{pass}/{name}")
 	public String join(@PathVariable("id")String id,@PathVariable("pass")String pass,@PathVariable("name")String name) {
@@ -68,35 +65,11 @@ public class UserController {
 		member.setName(name);
 		cmd.setMember(member);
 		mService.addMember(cmd);
-		return "redirect:/login";
-	}
-	@RequestMapping("/nav")
-	public String nav() {
-		return "public:common/nav.tiles";
+		return shift.redirect("user", "login");
 	}
 	@RequestMapping("/mypage")
 	public String mypage() {
-		return "public:user/mypage.tiles";
-	}
-	@RequestMapping("/burgerking")
-	public String burgerking() {
-		return "public:burgerking/main.tiles";
-	}
-	@RequestMapping("/kakao")
-	public String kakao() {
-		return "public:account/main.tiles";
-	}
-	@RequestMapping("/bitcamp")
-	public String bitcamp() {
-		return "public:bitcamp/main.tiles";
-	}
-	@RequestMapping("/mobile")
-	public String mobile() {
-		return "public:mobile/main.tiles";
-	}
-	@RequestMapping("/lotto")
-	public String lotto() {
-		return "public:lotto/main.tiles";
+		return shift.create("user", "mypage");
 	}
 	@RequestMapping("/lotto/{money}")
 	public String lotto(@PathVariable String money, Model model) {
@@ -104,6 +77,6 @@ public class UserController {
 		lotto.setMoney(money);
 		model.addAttribute("lottos", service.createLottos(lotto));
 		model.addAttribute("money", money);
-		return "public:lotto/result.tiles";
+		return shift.create("lotto", "result");
 	}
 }

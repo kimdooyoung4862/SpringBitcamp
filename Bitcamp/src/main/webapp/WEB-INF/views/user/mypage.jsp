@@ -59,7 +59,7 @@ $('#mypage-btn').on('click',function(){
 	location.href = "${path.context}/nav";
 });
 $('#mypage-phone').on('click',function(){
-	location.href = "${path.context}/phone";
+	location.href = "${path.context}/mobile/main";
 });
 </script>
 

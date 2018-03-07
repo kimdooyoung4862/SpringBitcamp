@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bitcamp.web.mapperImpl.PhoneMapperImpl">
-	<insert id="openPhone" parameterType="cmd">
-	INSERT INTO SKT VALUES (customer_num.nextval,#{member.phone},sysdate,#{})
-	</insert>
+	<select id="list" resultType="phone">
+		SELECT * FROM Mobile
+	</select>
 </mapper>

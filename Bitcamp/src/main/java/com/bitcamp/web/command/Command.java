@@ -23,7 +23,7 @@ public class Command{
 	protected AttendDTO attend;
 	protected LottoDTO lotto;
 	protected FoodDTO food;
-	protected PhoneDTO mobile;
+	protected PhoneDTO phone;
 
 //
 }
