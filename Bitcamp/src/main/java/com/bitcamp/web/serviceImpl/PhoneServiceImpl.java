@@ -1,9 +1,7 @@
 package com.bitcamp.web.serviceImpl;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import com.bitcamp.web.command.Command;
 import com.bitcamp.web.domain.PhoneDTO;
@@ -16,6 +14,7 @@ public class PhoneServiceImpl implements PhoneService{
 	
 	@Override
 	public void openPhone(Command cmd) {
+		
 	}
 	@Override
 	public List<PhoneDTO> phones() {

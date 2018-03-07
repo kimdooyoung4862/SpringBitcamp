@@ -15,24 +15,23 @@ public class MemberMapperImpl implements MemberMapper{
 	private static final Logger logger = LoggerFactory.getLogger(MemberMapperImpl.class);
 	@Autowired MemberDTO member;
 	@Autowired SqlSessionTemplate sqlSession;
-	String ns = "com.bitcamp.web.mapperImpl.MemberMapperImpl.";
 	
 	@Override
 	public void insertMember(Command cmd) {
 		logger.info("MemberMapperImpl join() ID is {} ",cmd.getMember().getId());
-		sqlSession.insert(ns+"insertMember",cmd);
+		sqlSession.insert("insertMember",cmd);
 		
 	}
 
 	@Override
 	public MemberDTO selectMemberById(Command cmd) {
-		return sqlSession.selectOne(ns+"selectMemberById",cmd);
+		return sqlSession.selectOne("selectMemberById",cmd);
 	}
 
 	@Override
 	public int exist(Command cmd) {
 		logger.info("MemberMapperImpl login() ID is {} ",cmd.getMember().getId());
-		return sqlSession.selectOne(ns+"exist",cmd);
+		return sqlSession.selectOne("exist",cmd);
 	}
 
 	@Override

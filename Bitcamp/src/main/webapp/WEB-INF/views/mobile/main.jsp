@@ -40,9 +40,8 @@
 	     <div class = "thumbnail">
 	        <img src = "${path.img}/phone/${phone.thumbnail}.jpg" alt = "">
 	        <hr />
-	        <input type="hidden" name="phoneSeq" value="${phone.seq}"/>
-	        <input id="radio" type="radio" name="model" value="${phone.model}"/>
-	        
+	        ${phone.model}
+	        <input id="radio" type="radio" name="seq" value="${phone.seq}"/>
 	     </div>
         </div>
 	</c:forEach>
@@ -68,12 +67,9 @@
 </div>
 </div>
 <script>
-$('#phone-open-btn').on('click',function(){
-	var $openForm = $('#form-open-phone');
-	$openForm.attr('action','${path.context}/mobile/openphone');
-	$openForm.attr('method','post');
-	var selectedVal = $('#radio').prop("checked", true);
-	alert('선택한 폰 '+selectedVal);
-	//$openForm.submit();
+$('#phone-open-btn').on('click',()=>{
+	$('#form-open-phone')
+	.attr('action','${path.context}/mobile/openphone')
+	.attr('method','post').submit();
 });
 </script>

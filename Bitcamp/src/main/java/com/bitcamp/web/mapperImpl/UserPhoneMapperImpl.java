@@ -1,18 +1,18 @@
 package com.bitcamp.web.mapperImpl;
 
-import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.bitcamp.web.domain.PhoneDTO;
-import com.bitcamp.web.mapper.PhoneMapper;
+
+import com.bitcamp.web.command.Command;
+import com.bitcamp.web.mapper.UserPhoneMapper;
 
 @Repository
-public class PhoneMapperImpl implements PhoneMapper{
+public class UserPhoneMapperImpl implements UserPhoneMapper{
 	@Autowired SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<PhoneDTO> list() {
-		return sqlSession.selectList("list");
+	public void insertPhone(Command cmd) {
+		sqlSession.insert("insertPhone",cmd);
 	}
 }

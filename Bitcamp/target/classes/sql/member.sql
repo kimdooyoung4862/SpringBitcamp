@@ -1,4 +1,4 @@
-select * from mobile;
+select * from userphone;
 alter table SKT ADD model varchar2(20);
 drop table SKT;
 phoneSeq,thumbnail,model;
