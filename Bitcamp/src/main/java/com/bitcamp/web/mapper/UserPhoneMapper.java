@@ -1,4 +1,4 @@
-package com.bitcamp.web.mapper;
+/*package com.bitcamp.web.mapper;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -9,3 +9,4 @@ import com.bitcamp.web.command.Command;
 public interface UserPhoneMapper {
 	public void insertPhone(Command cmd);
 }
+*/

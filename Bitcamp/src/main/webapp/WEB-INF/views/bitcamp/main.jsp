@@ -54,7 +54,6 @@
   	</table>
 	
 </article>
-</section>
 </body>
 
 </html>

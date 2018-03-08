@@ -39,4 +39,3 @@
 </table> 	
 </section>
 <script src="../../js/admin/member_list.js"></script>
-<%@ include file="../common/footer.jspf" %>

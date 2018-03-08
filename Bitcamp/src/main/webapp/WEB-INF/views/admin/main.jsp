@@ -34,7 +34,6 @@
 	</table>
 	
 </section>
-<%@ include file="../common/footer.jspf" %>
 <script>
 document.querySelector('#admin-create-table-btn')
 	.addEventListener('click',

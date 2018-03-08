@@ -1,4 +1,4 @@
-package com.bitcamp.web.mapperImpl;
+/*package com.bitcamp.web.mapperImpl;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,4 +15,4 @@ public class UserPhoneMapperImpl implements UserPhoneMapper{
 	public void insertPhone(Command cmd) {
 		sqlSession.insert("insertPhone",cmd);
 	}
-}
+}*/

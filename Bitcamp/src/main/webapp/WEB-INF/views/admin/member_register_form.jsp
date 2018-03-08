@@ -32,6 +32,5 @@
 </form>	  
 </section>	
 <script src="../../js/admin/member_register_form.js"></script>
-<%@ include file="../common/footer.jspf" %>
    
    

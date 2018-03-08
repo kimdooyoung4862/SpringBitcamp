@@ -1,13 +1,13 @@
-package com.bitcamp.web.serviceImpl;
+/*package com.bitcamp.web.serviceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.bitcamp.web.command.Command;
 import com.bitcamp.web.mapper.UserPhoneMapper;
-import com.bitcamp.web.service.UserService;
+import com.bitcamp.web.service.UserPhoneService;
 
 @Service
-public class UserPhoneServiceImpl implements UserService{
+public class UserPhoneServiceImpl implements UserPhoneService{
 	@Autowired UserPhoneMapper mapper;
 
 	@Override
@@ -22,4 +22,4 @@ public class UserPhoneServiceImpl implements UserService{
 				"-"+String.valueOf(
 					(int)(Math.random() * 8999 + 1000));
 	}
-}
+}*/

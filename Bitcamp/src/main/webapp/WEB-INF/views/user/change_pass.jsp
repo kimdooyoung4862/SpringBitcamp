@@ -4,7 +4,7 @@
 <form id="change_pass_form" action="${ctx}/user.do">
 	<input id="current_pass" type="text" value="${sessionScope.user.pass}" />
 		현재 비밀번호<br />
-	<input id="change_pass" name="newPass" type="" />수정할 비밀번호<br />
+	<input id="change_pass" name="newPass"  />수정할 비밀번호<br />
 	<input id="confirm_pass" type="text" />수정할 비밀번호 확인<br />
 	<input type="hidden" name="cmd" value="change_pass" />
 	<input type="hidden" name="dir" value="bitcamp" />

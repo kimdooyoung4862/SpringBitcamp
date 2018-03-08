@@ -1,4 +1,4 @@
-package com.bitcamp.web.controller;
+/*package com.bitcamp.web.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import com.bitcamp.web.command.Command;
 import com.bitcamp.web.domain.MemberDTO;
 import com.bitcamp.web.domain.UserPhoneDTO;
 import com.bitcamp.web.factory.ShiftFactory;
-import com.bitcamp.web.service.UserService;
+import com.bitcamp.web.service.UserPhoneService;
 
 @SessionAttributes("user")
 @Controller
@@ -22,16 +22,16 @@ public class UserPhoneController {
 	private static final Logger logger = LoggerFactory.getLogger(PhoneController.class);
 	@Autowired ShiftFactory shift;
 	@Autowired UserPhoneDTO uPhone;
-	@Autowired UserService service;
+	@Autowired UserPhoneService service;
 	@Autowired Command cmd;
 	
 	@RequestMapping(value="/mobile/openphone",method=RequestMethod.POST)
-	public String openPhone(Model model,@RequestParam("seq") String seq, @RequestParam("telecom") String telecom, @ModelAttribute("user") MemberDTO member) {
-		logger.info("PhoneController phoneSeq() phoneSeq is {} ", seq);
+	public String openPhone(Model model,@RequestParam("phoneSeq") String phoneSeq, @RequestParam("telecom") String telecom, @ModelAttribute("user") MemberDTO member) {
+		logger.info("PhoneController phoneSeq() phoneSeq is {} ", phoneSeq);
 		logger.info("PhoneController telecom() telecom is {} ", telecom);
-		uPhone.setPhoneId(member.getId()+seq);
+		uPhone.setPhoneId(member.getId()+phoneSeq);
 		uPhone.setTelecom(telecom);
-		uPhone.setPhoneSeq(seq);
+		uPhone.setPhoneSeq(phoneSeq);
 		uPhone.setMemberId(member.getId());
 		uPhone.setPhoneNum(service.createPhoneNum());
 		System.out.println("핸드폰 번호 : "+uPhone.getPhoneNum());
@@ -43,4 +43,4 @@ public class UserPhoneController {
 		service.openPhone(cmd);
 		return shift.create("user", "mypage");
 	}
-}
+}*/

@@ -1,18 +1,11 @@
 package com.bitcamp.web.domain;
 
+import org.springframework.stereotype.Component;
 import lombok.Data;
 
 @Data
+@Component
 public class AccountDTO {
 	private String 
-		customerNum,accountNum,money,id;
-
-	@Override
-	public String toString() {
-		return "계좌번호 [고객번호 =" + customerNum + ", 계좌번호 =" + accountNum + ", 잔액 =" + money + ", 아이디 ="
-				+ id + "]";
-	}
-	
-
-	
+		accSeq,accountNum,money,id;	
 }

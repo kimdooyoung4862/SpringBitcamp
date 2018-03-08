@@ -41,7 +41,7 @@
 	        <img src = "${path.img}/phone/${phone.thumbnail}.jpg" alt = "">
 	        <hr />
 	        ${phone.model}
-	        <input id="radio" type="radio" name="seq" value="${phone.seq}"/>
+	        <input id="radio" type="radio" name="phoneSeq" value="${phone.phoneSeq}"/>
 	     </div>
         </div>
 	</c:forEach>
@@ -67,7 +67,7 @@
 </div>
 </div>
 <script>
-$('#phone-open-btn').on('click',()=>{
+$('#phone-open-btn').on('click',function(){
 	$('#form-open-phone')
 	.attr('action','${path.context}/mobile/openphone')
 	.attr('method','post').submit();

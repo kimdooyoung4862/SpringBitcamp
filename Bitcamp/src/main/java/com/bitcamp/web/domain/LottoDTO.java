@@ -7,7 +7,5 @@ import lombok.Data;
 @Data
 @Component
 public class LottoDTO {
-	
 	private String randomNumber, lottoNumber, money, count;
-
 }
