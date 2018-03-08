@@ -17,7 +17,7 @@ public interface AdminMapper {
 	public List<AdminDTO> selectAll();
 	public List<AdminDTO> selectByName(Command cmd);
 	public AdminDTO selectById(Command cmd);
-	public int count();
+	public int selectCount();
 
 
 }

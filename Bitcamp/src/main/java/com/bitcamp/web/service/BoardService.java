@@ -7,12 +7,14 @@ import com.bitcamp.web.domain.BoardDTO;
 
 @Component
 public interface BoardService {
+
 	public void addBoard(Command cmd);
-	public void updateBoard(Command cmd);
-	public void deleteBoard(Command cmd);
+	public void modifyBoard(Command cmd);
+	public void removeBoard(Command cmd);
 	public List<BoardDTO> list();
-	public List<BoardDTO> selectByName(Command cmd);
-	public BoardDTO selectById(Command cmd);
+	public List<BoardDTO> findByName(Command cmd);
+	public BoardDTO findById(Command cmd);
 	public int count();
+
 
 }

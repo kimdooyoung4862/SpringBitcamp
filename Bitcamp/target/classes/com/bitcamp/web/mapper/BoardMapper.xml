@@ -3,5 +3,11 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bitcamp.web.mapperImpl.BoardMapperImpl">
-
+	<insert id="insertBoard" parameterType="cmd"></insert>
+	<update id="updateBoard" parameterType="cmd"></update>
+	<delete id="deleteBoard" parameterType="cmd"></delete>
+	<select id="selectAll" resultType="board"></select>
+	<select id="selectByName" resultType="board"></select>
+	<select id="selectById" resultType="board"></select>
+	<select id="selectCount" resultType="board"></select>
 </mapper>

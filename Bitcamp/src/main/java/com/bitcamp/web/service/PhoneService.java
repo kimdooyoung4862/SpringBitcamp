@@ -10,5 +10,14 @@ public interface PhoneService {
 
 	public void openPhone(Command cmd);
 	public List<PhoneDTO> phones();
+	public void addPhone(Command cmd);
+	public void modifyPhone(Command cmd);
+	public void removePhone(Command cmd);
+	public List<PhoneDTO> list();
+	public List<PhoneDTO> findByName(Command cmd);
+	public PhoneDTO findById(Command cmd);
+	public int count();
+
+
 
 }

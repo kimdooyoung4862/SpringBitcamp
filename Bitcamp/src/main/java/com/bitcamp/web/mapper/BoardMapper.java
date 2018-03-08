@@ -17,7 +17,7 @@ public interface BoardMapper {
 	public List<BoardDTO> selectAll();
 	public List<BoardDTO> selectByName(Command cmd);
 	public BoardDTO selectById(Command cmd);
-	public int count();
+	public int selectCount();
 
 
 }

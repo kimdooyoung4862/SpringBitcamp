@@ -16,13 +16,13 @@ public class AccountServiceImpl implements AccountService{
 	}
 
 	@Override
-	public void updateAccount(Command cmd) {
+	public void modifyAccount(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteAccount(Command cmd) {
+	public void removeAccount(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -34,13 +34,13 @@ public class AccountServiceImpl implements AccountService{
 	}
 
 	@Override
-	public List<AccountDTO> selectByName(Command cmd) {
+	public List<AccountDTO> findByName(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public AccountDTO selectById(Command cmd) {
+	public AccountDTO findById(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -50,5 +50,4 @@ public class AccountServiceImpl implements AccountService{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
 }

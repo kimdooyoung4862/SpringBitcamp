@@ -16,13 +16,13 @@ public class FoodServiceImpl implements FoodService{
 	}
 
 	@Override
-	public void updateFood(Command cmd) {
+	public void modifyFood(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteFood(Command cmd) {
+	public void removeFood(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -34,13 +34,13 @@ public class FoodServiceImpl implements FoodService{
 	}
 
 	@Override
-	public List<FoodDTO> selectByName(Command cmd) {
+	public List<FoodDTO> findByName(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public FoodDTO selectById(Command cmd) {
+	public FoodDTO findById(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}

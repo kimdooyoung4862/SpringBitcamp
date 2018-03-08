@@ -48,7 +48,7 @@ public class AccountMapperImpl implements AccountMapper{
 	}
 
 	@Override
-	public int count() {
+	public int selectCount() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

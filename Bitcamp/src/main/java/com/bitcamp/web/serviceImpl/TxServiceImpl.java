@@ -34,13 +34,13 @@ public class TxServiceImpl implements TxService{
 	}
 
 	@Override
-	public void updateTx(Command cmd) {
+	public void modifyTx(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteTx(Command cmd) {
+	public void removeTx(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -52,13 +52,13 @@ public class TxServiceImpl implements TxService{
 	}
 
 	@Override
-	public List<TxDTO> selectByName(Command cmd) {
+	public List<TxDTO> findByName(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public TxDTO selectById(Command cmd) {
+	public TxDTO findById(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -68,4 +68,5 @@ public class TxServiceImpl implements TxService{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
 }

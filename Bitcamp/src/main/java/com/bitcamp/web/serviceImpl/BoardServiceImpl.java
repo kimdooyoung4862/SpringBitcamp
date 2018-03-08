@@ -16,13 +16,13 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void updateBoard(Command cmd) {
+	public void modifyBoard(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteBoard(Command cmd) {
+	public void removeBoard(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -34,13 +34,13 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List<BoardDTO> selectByName(Command cmd) {
+	public List<BoardDTO> findByName(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public BoardDTO selectById(Command cmd) {
+	public BoardDTO findById(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -43,6 +43,7 @@ public class TxController {
 		System.out.println("멤버ID : "+member.getId());
 		cmd.setTx(tx);
 		service.openPhone(cmd);
+		model.addAttribute("phone",service.createPhoneNum());
 		return shift.create("user", "mypage");
 	}
 

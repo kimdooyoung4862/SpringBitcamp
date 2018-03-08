@@ -9,11 +9,12 @@ import com.bitcamp.web.domain.AccountDTO;
 public interface AccountService {
 
 	public void addAccount(Command cmd);
-	public void updateAccount(Command cmd);
-	public void deleteAccount(Command cmd);
+	public void modifyAccount(Command cmd);
+	public void removeAccount(Command cmd);
 	public List<AccountDTO> list();
-	public List<AccountDTO> selectByName(Command cmd);
-	public AccountDTO selectById(Command cmd);
+	public List<AccountDTO> findByName(Command cmd);
+	public AccountDTO findById(Command cmd);
 	public int count();
+
 
 }

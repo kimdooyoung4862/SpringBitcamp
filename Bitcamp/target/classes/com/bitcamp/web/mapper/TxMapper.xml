@@ -6,4 +6,11 @@
 	<insert id="insertPhone" parameterType="cmd">
 		INSERT INTO Tx VALUES (#{tx.txKey},#{tx.id},#{tx.count},#{tx.total},sysdate,#{tx.telecom},#{tx.phoneNum})
 	</insert>
+	<insert id="insertTx" parameterType="cmd"></insert>
+	<update id="updateTx" parameterType="cmd"></update>
+	<delete id="deleteTx" parameterType="cmd"></delete>
+	<select id="selectAll" resultType="tx"></select>
+	<select id="selectByName" resultType="tx"></select>
+	<select id="selectById" resultType="tx"></select>
+	<select id="selectCount" resultType="tx"></select>
 </mapper>

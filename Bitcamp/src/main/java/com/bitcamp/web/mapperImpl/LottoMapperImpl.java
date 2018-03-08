@@ -48,7 +48,7 @@ public class LottoMapperImpl implements LottoMapper{
 	}
 
 	@Override
-	public int count() {
+	public int selectCount() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

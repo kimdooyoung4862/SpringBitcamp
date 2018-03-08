@@ -10,11 +10,11 @@ import com.bitcamp.web.domain.TxDTO;
 public interface TxService {
 	
 	public void addTx(Command cmd);
-	public void updateTx(Command cmd);
-	public void deleteTx(Command cmd);
+	public void modifyTx(Command cmd);
+	public void removeTx(Command cmd);
 	public List<TxDTO> list();
-	public List<TxDTO> selectByName(Command cmd);
-	public TxDTO selectById(Command cmd);
+	public List<TxDTO> findByName(Command cmd);
+	public TxDTO findById(Command cmd);
 	public int count();
 	public void openPhone(Command cmd);
 	public String createPhoneNum();

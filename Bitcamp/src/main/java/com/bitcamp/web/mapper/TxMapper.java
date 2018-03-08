@@ -18,7 +18,7 @@ public interface TxMapper {
 	public List<TxDTO> selectAll();
 	public List<TxDTO> selectByName(Command cmd);
 	public TxDTO selectById(Command cmd);
-	public int count();
+	public int selectCount();
 	void insertPhone(Command cmd);
 
 }

@@ -18,6 +18,42 @@ public class PhoneServiceImpl implements PhoneService{
 	}
 	@Override
 	public List<PhoneDTO> phones() {
-		return mapper.list();
+		return mapper.selectAll();
 	}
+	@Override
+	public void addPhone(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void modifyPhone(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void removePhone(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public List<PhoneDTO> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<PhoneDTO> findByName(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public PhoneDTO findById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

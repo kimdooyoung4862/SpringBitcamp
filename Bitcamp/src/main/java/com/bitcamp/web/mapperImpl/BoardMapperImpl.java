@@ -48,7 +48,7 @@ public class BoardMapperImpl implements BoardMapper{
 	}
 
 	@Override
-	public int count() {
+	public int selectCount() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

@@ -17,7 +17,7 @@ public interface FoodMapper {
 	public List<FoodDTO> selectAll();
 	public List<FoodDTO> selectByName(Command cmd);
 	public FoodDTO selectById(Command cmd);
-	public int count();
+	public int selectCount();
 
 
 }

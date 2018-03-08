@@ -17,7 +17,7 @@ public interface LottoMapper {
 	public List<LottoDTO> selectAll();
 	public List<LottoDTO> selectByName(Command cmd);
 	public LottoDTO selectById(Command cmd);
-	public int count();
+	public int selectCount();
 
 
 }

@@ -6,4 +6,9 @@
 	<select id="list" resultType="phone">
 		SELECT * FROM Mobile
 	</select>
+	<update id="updatePhone" parameterType="cmd"></update>
+	<delete id="deletePhone" parameterType="cmd"></delete>
+	<select id="selectByName" resultType="phone"></select>
+	<select id="selectById" resultType="phone"></select>
+	<select id="selectCount" resultType="phone"></select>
 </mapper>

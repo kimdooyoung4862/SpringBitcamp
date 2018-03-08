@@ -16,13 +16,13 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public void updateAdmin(Command cmd) {
+	public void modifyAdmin(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteAdmin(Command cmd) {
+	public void removeAdmin(Command cmd) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -34,13 +34,13 @@ public class AdminServiceImpl implements AdminService{
 	}
 
 	@Override
-	public List<AdminDTO> selectByName(Command cmd) {
+	public List<AdminDTO> findByName(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public AdminDTO selectById(Command cmd) {
+	public AdminDTO findById(Command cmd) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -50,7 +50,5 @@ public class AdminServiceImpl implements AdminService{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
-
 
 }

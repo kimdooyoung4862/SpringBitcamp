@@ -17,7 +17,7 @@ public interface AccountMapper {
 	public List<AccountDTO> selectAll();
 	public List<AccountDTO> selectByName(Command cmd);
 	public AccountDTO selectById(Command cmd);
-	public int count();
+	public int selectCount();
 
 
 }

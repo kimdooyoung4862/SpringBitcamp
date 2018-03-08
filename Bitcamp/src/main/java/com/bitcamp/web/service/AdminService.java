@@ -9,12 +9,13 @@ import com.bitcamp.web.domain.AdminDTO;
 public interface AdminService {
 
 	public void addAdmin(Command cmd);
-	public void updateAdmin(Command cmd);
-	public void deleteAdmin(Command cmd);
+	public void modifyAdmin(Command cmd);
+	public void removeAdmin(Command cmd);
 	public List<AdminDTO> list();
-	public List<AdminDTO> selectByName(Command cmd);
-	public AdminDTO selectById(Command cmd);
+	public List<AdminDTO> findByName(Command cmd);
+	public AdminDTO findById(Command cmd);
 	public int count();
+
 
 
 }

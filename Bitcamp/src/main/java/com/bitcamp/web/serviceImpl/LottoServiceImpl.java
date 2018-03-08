@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.bitcamp.web.command.Command;
 import com.bitcamp.web.controller.HomeController;
 import com.bitcamp.web.domain.LottoDTO;
 import com.bitcamp.web.service.LottoService;
@@ -48,18 +50,6 @@ public class LottoServiceImpl implements LottoService{
 	lotto.setRandomNumber(temp);
 	return lotto;
 	}
-	/*@Override
-	public LottoDTO createLotto() {
-		String num = "";
-		int[] foo = new int[6];
-		for(int i=0;i<6;i++) {
-			foo[i] += (int) Math.round(Math.random() * 44 +1);
-			num += foo[i]+" ";
-		}
-		lotto.setRandomNumber(num);
-		return lotto;
-	}
-	 */
 	@Override
 	public List<LottoDTO> createLottos(LottoDTO param) {
 		List<LottoDTO> list = new ArrayList<>();
@@ -76,4 +66,47 @@ public class LottoServiceImpl implements LottoService{
 		logger.info("하하 {} ",list);
 		return list;
 	}
+
+	@Override
+	public void addLotto(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void modifyLotto(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeLotto(Command cmd) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<LottoDTO> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<LottoDTO> findByName(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public LottoDTO findById(Command cmd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
