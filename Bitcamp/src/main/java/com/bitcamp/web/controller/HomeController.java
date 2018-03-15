@@ -27,7 +27,7 @@ public class HomeController {
 		model.addAttribute("serverTime", new SimpleDateFormat("yyyy년 MM월 dd일 hh:mm")
 				.format(new Date()));
 		model.addAttribute("path",contextFactory.path());
-		return "index";
+		return shift.create().toString();
 	}
 	@RequestMapping(value = "/move/{dir}/{page}", method = RequestMethod.GET)
 	public String move(@PathVariable("dir")String dir, @PathVariable("page")String page) {

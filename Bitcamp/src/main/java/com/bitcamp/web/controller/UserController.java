@@ -18,6 +18,7 @@ import com.bitcamp.web.mapper.MemberMapper;
 import com.bitcamp.web.service.LottoService;
 import com.bitcamp.web.service.MemberService;
 
+
 @SessionAttributes("user")
 @Controller
 public class UserController {
@@ -30,6 +31,7 @@ public class UserController {
 	@Autowired MemberDTO member;
 	@Autowired Command cmd;
 	@Autowired ShiftFactory shift;
+	
 	
 	@RequestMapping("/login/{userid}/{password}")
 	public String login(Model model,

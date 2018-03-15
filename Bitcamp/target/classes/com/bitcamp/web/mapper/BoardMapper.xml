@@ -3,11 +3,30 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bitcamp.web.mapperImpl.BoardMapperImpl">
-	<insert id="insertBoard" parameterType="cmd"></insert>
+	<insert id="insertBoard" parameterType="cmd">
+	<!--  INSERT INTO Board VALUES(bbsSeq.nextval,#{board.title},#{board.content},sysdate,#{board.nickName})-->
+	</insert>
 	<update id="updateBoard" parameterType="cmd"></update>
 	<delete id="deleteBoard" parameterType="cmd"></delete>
-	<select id="selectAll" resultType="board"></select>
+	<select id="selectAll" resultType="board" parameterType="cmd">
+	select A2.* from(
+		select rownum rn, A.* 
+		    from(select 
+		            bbsSeq,
+		            title,
+		            content,
+		            regdate,
+		            nickName 
+		                from board 
+		                    order by bbsSeq desc
+        		) A ) A2
+            where rn between #{paging.startRow} and #{paging.endRow}
+	</select>
 	<select id="selectByName" resultType="board"></select>
-	<select id="selectById" resultType="board"></select>
-	<select id="selectCount" resultType="board"></select>
+	<select id="selectById" resultType="board" parameterType="cmd">
+	SELECT * FROM Board WHERE bbsSeq LIKE #{board.bbsSeq}
+	</select>
+	<select id="selectCount" resultType="int" parameterType="cmd">
+	SELECT COUNT(*) FROM Board
+	</select>
 </mapper>

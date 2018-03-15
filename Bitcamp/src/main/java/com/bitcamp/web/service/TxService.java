@@ -17,5 +17,5 @@ public interface TxService {
 	public TxDTO findById(Command cmd);
 	public int count();
 	public void openPhone(Command cmd);
-	public String createPhoneNum();
+	public String createPhoneNum(Command cmd);
 }

@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 @Component
 public class BoardDTO {
-	private String bbsSeq,title,content,regdate,id;
+	private String bbsSeq,title,content,regdate,nickName;
 }

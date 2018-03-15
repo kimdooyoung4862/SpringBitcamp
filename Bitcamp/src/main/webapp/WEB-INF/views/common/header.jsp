@@ -23,8 +23,11 @@
       <ul class="nav navbar-nav">
         <li id="a-home" class="active"><a href="#">
         	<span class="glyphicon glyphicon-home" aria-hidden="true"> HOME</span></a></li>
-        <li><a id="a-about" href="#about">
+        <li><a id="a-about" href="#">
         	<span class="glyphicon glyphicon-map-marker" aria-hidden="true"> about</span>
+        </a></li>
+        <li><a id="span-board" href="#">
+        	<span class="glyphicon glyphicon-map-marker" aria-hidden="true"> 게시판</span>
         </a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-expanded="false"> 선택 <span class="caret"></span></a>
@@ -77,23 +80,23 @@
   </div>
 </nav>
 <script>
-	$('#a-login').on('click',function(){	
-		location.href = '${path.context}/move/user/login';
+	$('#a-login').on('click',function(){
+		app.move("user/login");
 	});
-	$('#a-burgerking').on('click',function(){	
-		location.href = '${path.context}/move/burgerking/main';
+	$('#a-burgerking').on('click',function(){
+		app.move("burgerking/main");
 	});
-	$('#a-bitcamp').on('click',function(){	
-		location.href = '${path.context}/move/bitcamp/main';
+	$('#a-bitcamp').on('click',function(){
+		app.move("bitcamp/main");
 	});
-	$('#a-lotto').on('click',function(){	
-		location.href = '${path.context}/move/lotto/main';
+	$('#a-lotto').on('click',function(){
+		app.move("lotto/main");
 	});
-	$('#a-kakao').on('click',function(){	
-		location.href = '${path.context}/move/kakao/main';
+	$('#a-kakao').on('click',function(){
+		app.move("account/main");
 	});
 	$('#a-mobile').on('click',function(){	
-		location.href = '${path.context}/mobile/main';
+		app.move("mobile/main");
 	});
 	$('#a-logout').on('click',function(){	
 		location.href = '${path.context}/logout';
@@ -102,11 +105,15 @@
 		location.href = '${path.context}/mypage';
 	});
 	$('#a-home').on('click',function(){	
-		location.href = '${path.context}/move/home';
+		app.move("home");
 	});
 	$('#a-join').on('click',function(){	
-		location.href = '${path.context}/move/user/join';
+		app.move("user/join");
 	});
+	$('#span-board').on('click',function(){
+		alert('borad/list 이동');
+		app.boardList(1);
+    });
 </script>
 		
 		

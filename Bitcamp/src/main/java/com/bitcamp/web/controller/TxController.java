@@ -34,16 +34,14 @@ public class TxController {
 		tx.setId(member.getId());
 		tx.setCount("1");
 		tx.setTotal("1");
-		tx.setRegdate("2018-03-08");
 		tx.setTelecom(telecom);
-		tx.setPhoneNum(service.createPhoneNum());
+		tx.setPhoneNum(service.createPhoneNum(cmd));
 		System.out.println("핸드폰 번호 : "+tx.getPhoneNum());
 		System.out.println("핸드폰 아이디 : "+tx.getTxKey());
 		System.out.println("통신사 : "+tx.getTelecom());
 		System.out.println("멤버ID : "+member.getId());
 		cmd.setTx(tx);
 		service.openPhone(cmd);
-		model.addAttribute("phone",service.createPhoneNum());
 		return shift.create("user", "mypage");
 	}
 

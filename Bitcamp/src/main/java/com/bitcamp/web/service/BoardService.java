@@ -11,10 +11,10 @@ public interface BoardService {
 	public void addBoard(Command cmd);
 	public void modifyBoard(Command cmd);
 	public void removeBoard(Command cmd);
-	public List<BoardDTO> list();
+	public List<BoardDTO> list(Command cmd);
 	public List<BoardDTO> findByName(Command cmd);
 	public BoardDTO findById(Command cmd);
-	public int count();
+	public int count(Command cmd);
 
 
 }

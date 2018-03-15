@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<script src="${js}/jquery-3.3.1.min.js"></script>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <section>
 <article>
@@ -16,7 +15,7 @@
 			<td class="mypage-column">PASSWORD</td>
 			<td class="mypage-data">****</td>
 			<td class="mypage-column">PHONE</td>
-			<td class="mypage-data">
+			<td id="td-phone" class="mypage-data">
 				<a id="mypage-phone" href="#">개통</a>
 			</td>
 		</tr>
@@ -55,11 +54,19 @@
 </article>
 </section>
 <script>
+ /*$(function(){ 
+	if("${user.ssn}" === ''){
+		$('#td-phone').html('<a id="mypage-phone" href="#">개통</a>');
+	}else{
+		$('#td-phone').html('${user.ssn}');
+	}
+});*/
 $('#mypage-btn').on('click',function(){
 	location.href = "${path.context}/nav";
 });
 $('#mypage-phone').on('click',function(){
 	location.href = "${path.context}/mobile/main";
 });
+
 </script>
 

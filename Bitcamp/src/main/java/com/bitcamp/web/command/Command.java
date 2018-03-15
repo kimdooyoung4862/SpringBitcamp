@@ -26,4 +26,6 @@ public class Command{
 	protected FoodDTO food;
 	protected PhoneDTO phone;
 	protected TxDTO tx;
+	protected BoardDTO board;
+	protected Page paging;
 }

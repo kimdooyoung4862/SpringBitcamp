@@ -20,7 +20,7 @@ public class TxServiceImpl implements TxService{
 	}
 
 	@Override
-	public String createPhoneNum() {
+	public String createPhoneNum(Command cmd) {
 		return "010-"+String.valueOf(
 				(int)(Math.random() * 8999 + 1000))+
 				"-"+String.valueOf(
@@ -68,5 +68,4 @@ public class TxServiceImpl implements TxService{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
 }
